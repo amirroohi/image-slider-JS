@@ -1,36 +1,148 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: rgb(177, 177, 177);
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+.nav-container {
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(248, 255, 255);
+  border-radius: 0 0 10px 10px;
+  justify-content: space-between;
+  padding: 7px 10px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.main-nav {
+  display: none;
+}
+.nav-container h2{
+  font-weight: 700;
+  font-size: 2rem;
+  margin-left: 2vw;
+}
+.main-nav a {
+  text-decoration: none;
+  color: #000;
+  padding: 7px 15px;
+  border-radius: 6px;
+}
+.main-nav li:hover,
+.main-nav a:hover {
+  color: #fff;
+  background-color: #059669;
+}
+.main-nav li:nth-child(4) a {
+  color: #fff;
+  background-color: #059669;
+}
+.main-nav li {
+  list-style: none;
+  margin: 0 4px;
+}
+.hamburger-menu {
+  width: 30px;
+  height: 30px;
+}
+.hamburger-menu span {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: #000;
+  margin: 3px;
+}
+.container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.fisrt-image {
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  object-fit: cover;
+  background-size: cover;
+  background-image: url(./image/jungle2.jpg);
+  animation: blurChange 5s linear 1;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  top: 5vh;
+}
+@keyframes blurChange {
+  0% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(2px);
+    opacity: 0.9;
+  }
+}
+.text {
+  margin: 0;
+  margin-top: 14rem;
+  padding: 10px 20px;
+  font-size: 2rem;
+  color: azure;
+  border: 2px solid azure;
+}
+.main-text{
+  width: 50vw;
+  height: 100px;
+  color: #fff;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+@media (min-width: 600px) {
+  .text {
+    font-size: 3rem;
+  }
+  .main-nav {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .text {
+    font-size: 4rem;
+  }
+  .main-nav {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .text {
+    font-size: 5rem;
+  }
+  .main-nav {
     display: flex;
-    /* align-items: center; */
-    justify-content: center;
-    position: relative;
-    top: 20vh;
+  }
+  .hamburger-menu {
+    display: none;
+  }
 }
-.container{
-    width: 50%;
-    height: 400px;
-    background: rgb(168, 194, 228);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    background-image: url(./images/1.jpg);
-    background-size: cover;
+.second-image {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  position: absolute;
+  background-size: cover;
+  background-image: url(./image/jungle1.jpg);
+  z-index: 10;
 }
-.btn-left{
-    width: 50px;
-    height: 50px;
-    background-color: black;
-    position: relative;
-}
-.btn-right{    
-    width: 50px;
-    height: 50px;
-    position: relative;
-    background-color: black;
+.partTwo {
+  padding-bottom: 100px;
 }
