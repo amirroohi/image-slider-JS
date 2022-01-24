@@ -91,13 +91,7 @@ body {
 }
 
 /* slideShow */
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: Verdana, sans-serif;
-  margin: 0;
-}
+
 .mySlides {
   display: none;
 }
@@ -150,7 +144,7 @@ img {
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: 25px;
   width: 100%;
   text-align: center;
 }
@@ -165,15 +159,20 @@ img {
 }
 
 /* The dots/bullets/indicators */
+.dots{
+  text-align: center;
+}
 .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
+  margin: 4px 2px;
+  background-color: #ddd;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+  position: relative;
+  top: -25px;
 }
 
 .active,
